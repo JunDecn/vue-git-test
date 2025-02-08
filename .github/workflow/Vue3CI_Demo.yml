@@ -3,10 +3,10 @@ name: Vue3 CI Workflow
 on:
   push:
     branches:
-      - main  # 當推送到 main 分支時觸發
+      - master  # 當推送到 main 分支時觸發
   pull_request:
     branches:
-      - main  # 當提交 pull request 到 main 分支時觸發
+      - master  # 當提交 pull request 到 main 分支時觸發
 
 jobs:
   build:
