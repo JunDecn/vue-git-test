@@ -1,0 +1,33 @@
+name: Vue3 CI Workflow
+
+on:
+  push:
+    branches:
+      - master  # 當推送到 main 分支時觸發
+  pull_request:
+    branches:
+      - master  # 當提交 pull request 到 main 分支時觸發
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 虛擬機器
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  # 檢出代碼庫
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # 設定 Node.js 版本為 20
+
+      - name: Install dependencies
+        run: npm install  # 安裝依賴
+
+      - name: Run tests
+        run: npm run test:unit  # 執行測試
+
+      - name: Build project
+        run: npm run build  # 編譯 Vue 3 專案
+
+      
