@@ -5,5 +5,5 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 <template>
   <RouterLink to="/about">Go to About</RouterLink>
-  <HelloWorld msg="Hello Vue 3 + Vite some change" />
+  <HelloWorld msg="Hello Vue 3 + Vite some change 22" />
 </template>
