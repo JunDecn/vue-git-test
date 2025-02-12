@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  frontend:
+    build: .
+    container_name: vue3-app
+    
+    volumes: 
+     - .:/usr/src/app
+     - /usr/src/app/node_modules
+
+    restart: always
+    ports:
+      - "80:80"
